@@ -1,0 +1,50 @@
+<view class="page">
+
+  <view wx:if="{{!resultShow}}">
+  <!--标题-->
+      <view class='page__hd'>
+    <view class="page__title">
+      {{index+1}}、{{questionList[shuffleIndex[index]].question}}
+    </view>
+  </view>
+  <!--内容-->
+  <view class="page__bd">
+    <!-- <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio my-choosebox" wx:for="{{questionList[shuffleIndex[index]].option}}" wx:for-index="key"  wx:for-item="value" wx:key="key">
+        <radio value="{{key}}" checked="{{questionList[shuffleIndex[index]].checked}}"/>{{key}}、{{value}}
+      </label>
+    </radio-group> -->
+    <mp-checkbox-group  multi="{{false}}" bindchange="radioChange">
+        <mp-checkbox wx:for="{{questionList[shuffleIndex[index]].option}}" wx:for-index="key" wx:for-item="value" wx:key="key" label="{{key}}、{{value}}" value="{{key}}" checked="{{questionList[shuffleIndex[index]].checked}}"></mp-checkbox>
+    </mp-checkbox-group>
+  </view>
+  <!--按钮-->
+  <view class='page_ft'>
+    <view class='mybutton'>
+      <button bindtap='nextSubmit' wx:if="{{index == questionList.length-1}}">提交</button>
+      <button bindtap='nextSubmit' wx:else>下一题</button>
+      <text bindtap='outTest' class="toindex-btn">退出答题</text>
+    </view>
+  </view>
+  </view>
+
+  <view wx:if="{{resultShow}}">
+    <view class="page-title">
+      测试结束！您的得分为:
+    </view>
+    <!--分数-->
+    <view class='page-score'>
+      <text class="score-num">{{totalScore}}</text>
+      <text class="score-text">分</text>
+    </view>
+    <!-- 评价 -->
+    <text class="score-remark" wx:if="{{testId == 'SAS'}}">
+      {{totalScore < 50?remark_1[0]:(totalScore <= 60?remark_1[1]:(totalScore <= 70?remark_1[2]:remark_1[3]))}}
+    </text>  
+    <text class="score-remark" wx:if="{{testId == 'SDS'}}">
+      {{totalScore < 50?remark_2[0]:(totalScore <= 60?remark_2[1]:(totalScore <= 70?remark_2[2]:remark_2[3]))}}
+    </text>  
+  </view>
+  </view>
+
+

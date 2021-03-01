@@ -1,0 +1,46 @@
+<!--pages/home/home.wxml-->
+
+<!-- 首页轮播图效果 -->
+<view class="container">
+    <swiper class='bannerSwiper' previous-margin="54rpx" next-margin='54rpx' indicator-dots="true" indicator-color='#B5B5B5' indicator-active-color='#fff' interval='3000' duration='500' bindchange='onChange' circular='true' autoplay="true" easing-function="easeInOutCubic">
+      <block wx:for="{{banner}}" wx:key="key">
+        <swiper-item>
+          <image class="{{index==xindex?'imageBanner':'imageBanner_small'}}" data-index="{{index}}" data-item="item" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+</view>
+
+<!-- 导航按钮 -->
+ <view class="nav">
+
+  <view class="nav-item">
+    <view>
+      <navigator url="../test/test" class="navi-bar">
+        <image src="../../images/navigator_icon/T.png"></image>  
+      <view class="navi-bar">心理测试</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="nav-item">
+    <view>
+      <navigator url="../bottle/bottle" class="navi-bar">
+        <image src="../../images/navigator_icon/A.png"></image>  
+        <view class="navi-bar">心理调节</view>
+    </navigator>
+    </view>
+  </view>
+
+  <view class="nav-item">
+     <view>
+      <navigator url="../column/column" class="navi-bar">
+        <image src="../../images/navigator_icon/C.png"></image>  
+        <view class="navi-bar">知识专栏</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+ <!-- 分割线 -->
+<view class="hr"></view>

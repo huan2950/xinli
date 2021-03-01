@@ -1,0 +1,13 @@
+<view class="page">
+  <view class="page-title">请选择试题：</view>
+  <view class="flex-box">
+    <view class="flex-item">
+      <view class="item bc_blue" bindtap="toTestPage" data-testId="SAS">焦虑自评量表(SAS)</view>
+    </view>
+    <view class="flex-item">
+      <view class="item bc_red" bindtap="toTestPage" data-testId="SDS">抑郁自评量表(SDS)</view>
+    </view>
+  </view>
+  <a class="weui-btn_cell weui-btn_cell-primary" bindtap="resultCheck">查看测试结果</a>
+  <!-- <navigator url="/pages/logs/logs" hover-class="navigator-hover">查看测试结果</navigator> -->
+</view>

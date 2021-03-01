@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/forum/forum",
+    "pages/my/my",
+    "pages/test/test",
+    "pages/test/detail",
+    "pages/bottle/bottle",
+    "pages/column/column"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "心理小站",
+    "navigationBarTextStyle":"black"
+  },
+ 
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#999",
+    "selectedColor" :"#000000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/tabbar_icon/home.png",
+        "selectedIconPath": "images/tabbar_icon/home_seleted.png"
+      },{
+        "pagePath": "pages/forum/forum",
+        "text": "论坛",
+        "iconPath": "images/tabbar_icon/forum.png",
+        "selectedIconPath": "images/tabbar_icon/forum_seleted.png"
+      },{
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tabbar_icon/my.png",
+        "selectedIconPath": "images/tabbar_icon/my_seleted.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

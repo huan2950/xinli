@@ -1,0 +1,76 @@
+/* pages/home/home.wxss */
+
+/**index.wxss**/
+
+/* 首页轮播图样式 */
+.bannerSwiper {
+  height: 388rpx;
+  width: 100vw;
+  position: absolute;
+  left: 0rpx;
+  top: 10rpx;
+}
+
+
+.imageBanner {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  position: relative;
+  padding: 0;
+  line-height: 100%;
+  background: transparent;
+  border-bottom-left-radius: 0rpx;
+  border-bottom-right-radius: 0rpx;
+  text-align: left;
+}
+
+.imageBanner_small {
+  transform: scale(0.93);
+  transition: 0.2s, ease-in 0s;
+  border-radius: 10rpx;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -16rpx;
+  z-index: 100;
+  padding: 0;
+  line-height: 100%;
+  background: transparent;
+  text-align: left;
+}
+
+.hr{
+  height: 30rpx;
+  background: #ccc;
+  margin-top: 30rpx;
+  opacity: 0.2;
+}
+/* 导航按钮样式 */
+.nav{
+  height: 93rpx;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.nav-item{
+  width: 33%;
+  font-size: 14px;
+  margin-top: 20rpx;
+  border-right: 2px solid #cccccc;
+
+}
+
+.nav-item image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.navi-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 9rpx;
+}
